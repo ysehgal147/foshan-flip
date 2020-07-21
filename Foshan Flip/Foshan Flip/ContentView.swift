@@ -7,28 +7,34 @@
 //
 
 import SwiftUI
+import Grid
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            ForEach(cardlist) { index in
-                Card(char: index.character, isFaceUp: index.isFaceUp).padding()
-            }
-        }
+            Grid(cardlist) { index in
+                Card(char: index.character, isFaceUp: index.isFaceUp).padding(5)
+        }.gridStyle(
+            ModularGridStyle(columns: 2, rows: 3)
+        )
     }
 }
 
 struct Card: View {
     var char: String
-    var isFaceUp: Bool
+    @State var isFaceUp: Bool
     var body: some View {
-        ZStack {
-            if isFaceUp{
-            RoundedRectangle(cornerRadius: 20.0).foregroundColor(Color.orange)
-            }
-            else{
-                RoundedRectangle(cornerRadius: 20.0).stroke(lineWidth: 2)
-                Text(char).fontWeight(.bold)
+        GeometryReader { geometry in
+            ZStack {
+                if self.isFaceUp{
+                    RoundedRectangle(cornerRadius: 20.0).foregroundColor(Color.red)
+                }
+                else{
+                    RoundedRectangle(cornerRadius: 20.0).stroke(lineWidth: 2)
+                    Text(self.char).font(Font.system(size: min(geometry.size.width, geometry.size.height) * 0.75))
+                }
+            }.onTapGesture {
+                self.isFaceUp.toggle()
+                print(self.char)
             }
         }
     }

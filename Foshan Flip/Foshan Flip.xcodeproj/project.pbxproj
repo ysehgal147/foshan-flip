@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		2E07317524C0E0B2008844BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E07317424C0E0B2008844BE /* Preview Assets.xcassets */; };
 		2E07317824C0E0B2008844BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E07317624C0E0B2008844BE /* LaunchScreen.storyboard */; };
 		2E388B7324C5289B009DE991 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E388B7224C5289B009DE991 /* Logic.swift */; };
+		2E388B7624C661D4009DE991 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2E388B7524C661D4009DE991 /* WaterfallGrid */; };
+		2E388B7924C66673009DE991 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2E388B7824C66673009DE991 /* Grid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E388B7924C66673009DE991 /* Grid in Frameworks */,
+				2E388B7624C661D4009DE991 /* WaterfallGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +98,10 @@
 			dependencies = (
 			);
 			name = "Foshan Flip";
+			packageProductDependencies = (
+				2E388B7524C661D4009DE991 /* WaterfallGrid */,
+				2E388B7824C66673009DE991 /* Grid */,
+			);
 			productName = "Foshan Flip";
 			productReference = 2E07316824C0E0A8008844BE /* Foshan Flip.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +130,10 @@
 				Base,
 			);
 			mainGroup = 2E07315F24C0E0A8008844BE;
+			packageReferences = (
+				2E388B7424C661D4009DE991 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
+				2E388B7724C66673009DE991 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
+			);
 			productRefGroup = 2E07316924C0E0A8008844BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +358,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E388B7424C661D4009DE991 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		2E388B7724C66673009DE991 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-grid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E388B7524C661D4009DE991 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E388B7424C661D4009DE991 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
+		};
+		2E388B7824C66673009DE991 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E388B7724C66673009DE991 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			productName = Grid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E07316024C0E0A8008844BE /* Project object */;
 }

@@ -9,17 +9,24 @@
 import Foundation
 
 struct SingleCard: Identifiable{
-  let id: Int
-  let character: String
-  let isFaceUp: Bool
-}
+     let id: Int
+     let character: String
+     var isFaceUp: Bool = true
+    
+   }
 
 
 var cardlist = [
-    
-    SingleCard(id: 0, character: "A", isFaceUp: false),
-    SingleCard(id: 1, character: "B", isFaceUp: false),
-    SingleCard(id: 2, character: "C", isFaceUp: true),
-    SingleCard(id: 3, character: "D", isFaceUp: false)
-    
-    ]
+
+SingleCard(id: 0, character: "A"),
+SingleCard(id: 1, character: "B"),
+SingleCard(id: 2, character: "C"),
+SingleCard(id: 3, character: "D"),
+SingleCard(id: 4, character: "E"),
+SingleCard(id: 5, character: "F")
+
+]
+
+
+
+
