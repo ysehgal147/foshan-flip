@@ -14,7 +14,7 @@
 Memory Game to Guess and Find Out Similar Chinese Character Cards, Implemented in SwiftUI.
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/ysehgal147/foshan-flip/master/Foshan%20Flip/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202020-07-22%20at%2006.00.24.png" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ysehgal147/foshan-flip/master/Foshan%20Flip/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202020-07-22%20at%2006.00.29.png" width="400">
+<img src="https://raw.githubusercontent.com/ysehgal147/foshan-flip/master/Foshan%20Flip/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202020-07-22%20at%2006.00.24.png" width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ysehgal147/foshan-flip/master/Foshan%20Flip/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202020-07-22%20at%2006.00.29.png" width="300">
 
 
 ## Technologies
