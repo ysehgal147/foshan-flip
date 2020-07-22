@@ -15,18 +15,50 @@ struct SingleCard: Identifiable{
     
    }
 
-
-var cardlist = [
-
-SingleCard(id: 0, character: "A"),
-SingleCard(id: 1, character: "B"),
-SingleCard(id: 2, character: "C"),
-SingleCard(id: 3, character: "D"),
-SingleCard(id: 4, character: "E"),
-SingleCard(id: 5, character: "F")
-
-]
+let a = dataset.randomElement()
+let b = dataset.randomElement()
+let c = dataset.randomElement()
+let d = dataset.randomElement()
+let e = dataset.randomElement()
 
 
+var cardlist: Array<SingleCard> = [
+
+SingleCard(id: 0, character: a!),
+SingleCard(id: 1, character: b!),
+SingleCard(id: 2, character: c!),
+SingleCard(id: 3, character: d!),
+SingleCard(id: 4, character: e!),
+SingleCard(id: 5, character: a!),
+SingleCard(id: 6, character: b!),
+SingleCard(id: 7, character: c!),
+SingleCard(id: 8, character: d!),
+SingleCard(id: 9, character: e!)
+
+].shuffled()
+    
+
+var selectedlist = [Card]()
+
+func check() {
+if selectedlist.count==2{
+    
+    selectedlist[0].isFaceUp=false
+    selectedlist[1].isFaceUp=false
+    
+    if selectedlist[0].char==selectedlist[1].char{
+        print("Correct")
+        print(selectedlist)
+        selectedlist=[]
+    }
+    else if selectedlist[0].char != selectedlist[1].char{
+        print("In-Correct")
+        selectedlist[0].isFaceUp=true
+        selectedlist[1].isFaceUp=true
+        print(selectedlist)
+        selectedlist=[]
+    }
+}
+}
 
 

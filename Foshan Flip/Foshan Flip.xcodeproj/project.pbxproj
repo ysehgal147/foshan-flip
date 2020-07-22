@@ -16,6 +16,7 @@
 		2E388B7324C5289B009DE991 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E388B7224C5289B009DE991 /* Logic.swift */; };
 		2E388B7624C661D4009DE991 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2E388B7524C661D4009DE991 /* WaterfallGrid */; };
 		2E388B7924C66673009DE991 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2E388B7824C66673009DE991 /* Grid */; };
+		2E785F0724C7B6D70026DD0D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E785F0624C7B6D70026DD0D /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2E07317724C0E0B2008844BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E07317924C0E0B2008844BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E388B7224C5289B009DE991 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		2E785F0624C7B6D70026DD0D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2E07316D24C0E0A8008844BE /* SceneDelegate.swift */,
 				2E07316F24C0E0A8008844BE /* ContentView.swift */,
 				2E388B7224C5289B009DE991 /* Logic.swift */,
+				2E785F0624C7B6D70026DD0D /* Data.swift */,
 				2E07317124C0E0B2008844BE /* Assets.xcassets */,
 				2E07317624C0E0B2008844BE /* LaunchScreen.storyboard */,
 				2E07317924C0E0B2008844BE /* Info.plist */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E388B7324C5289B009DE991 /* Logic.swift in Sources */,
+				2E785F0724C7B6D70026DD0D /* Data.swift in Sources */,
 				2E07316C24C0E0A8008844BE /* AppDelegate.swift in Sources */,
 				2E07316E24C0E0A8008844BE /* SceneDelegate.swift in Sources */,
 				2E07317024C0E0A8008844BE /* ContentView.swift in Sources */,

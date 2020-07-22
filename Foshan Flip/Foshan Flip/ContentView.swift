@@ -11,11 +11,13 @@ import Grid
 
 struct ContentView: View {
     var body: some View {
-            Grid(cardlist) { index in
+        VStack {
+                Grid(cardlist) { index in
                 Card(char: index.character, isFaceUp: index.isFaceUp).padding(5)
-        }.gridStyle(
-            ModularGridStyle(columns: 2, rows: 3)
-        )
+            }.gridStyle(
+                ModularGridStyle(columns: 2, rows: 5)
+            )
+        }
     }
 }
 
@@ -26,19 +28,32 @@ struct Card: View {
         GeometryReader { geometry in
             ZStack {
                 if self.isFaceUp{
-                    RoundedRectangle(cornerRadius: 20.0).foregroundColor(Color.red)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20.0).foregroundColor(.red)
+                        Image("dragon").resizable().scaledToFit()
+                    }
                 }
                 else{
+                    ZStack{
                     RoundedRectangle(cornerRadius: 20.0).stroke(lineWidth: 2)
                     Text(self.char).font(Font.system(size: min(geometry.size.width, geometry.size.height) * 0.75))
+                    }
                 }
             }.onTapGesture {
-                self.isFaceUp.toggle()
-                print(self.char)
+                if self.isFaceUp == true{
+                    self.isFaceUp.toggle()
+                    selectedlist.append(self)
+                    }
+                if selectedlist.count>=2{
+                check()
+                    }
+            }.transition(.scale)
+            .animation(.default)
             }
         }
     }
-}
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
